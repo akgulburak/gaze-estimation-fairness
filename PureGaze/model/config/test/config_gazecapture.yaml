@@ -1,0 +1,16 @@
+---
+params:
+    batch_size: 1
+load:
+    begin: 4
+    end: 4
+    steps: 1
+data: 
+    image: "C:/Gaze/GazeCaptureDataset/Image"
+    label: "C:/FaceAndGazeCodes/gaze-estimation-fairness-dev/GazeCapture_Labels/test_with_ethnicity.label"
+    name: gaze360
+    header: True
+    isFolder: False
+savename: "evaluation"
+device: 0
+reader: reader_adap

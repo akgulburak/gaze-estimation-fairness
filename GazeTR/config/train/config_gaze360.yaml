@@ -1,0 +1,41 @@
+---
+train:
+
+    params:
+        batch_size: 256
+        epoch: 80
+        lr: 0.0005
+        decay: 0.5
+        decay_step: 60
+        warmup: 5
+
+    save:
+        metapath: "Transformer-6layers-retrain-5"
+        folder: gaze360
+        model_name: trans6-retrain-5
+        step: 10
+
+    data:
+        image: "C:/Gaze/Gaze360/FaceBased/Image"
+        label: "C:/FaceAndGazeCodes/gaze-estimation-fairness-dev/Gaze360_Labels/Gender/train_with_ethnicity.label"
+        header: True
+        name: gaze360
+        isFolder: False
+        
+    pretrain:
+        enable: True
+        path: "pretrained/GazeTR-H-ETH.pt"
+        device: 0
+
+    device: 0
+
+    reader: reader
+
+
+    use_oversample: False
+    use_reweight: False
+    use_regularize: False
+    use_class_weight: False
+    regularize_rate: 0.1
+# dropout = 0
+# dim_feed = 512

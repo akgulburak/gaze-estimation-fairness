@@ -1,0 +1,29 @@
+---
+params:
+    batch_size: 24
+    epoch: 100
+    lr: 0.0001
+    decay: 1
+    decay_step: 10
+
+save:
+    metapath: "/home/chengyihua/work/PureGaze/camera-ready/exp/Res50-PureGaze/"
+    folder: reproduce
+    name: reproduce
+    step: 10
+
+data:
+    image: "C:/Gaze/Gaze360/FaceBased/Image"
+    label: "C:/Users/x/Desktop/gaze-estimation-fairness/train_with_genders.label"
+    header: True
+    name: gaze360
+    isFolder: False
+
+pretrain: False
+use_oversample: False
+use_reweight: False
+use_class_weights: False
+
+device: 0
+reader: reader_adap
+map: "C:/Users/x/Desktop/gaze-estimation-fairness/PureGaze/Masker/360-masker.jpg"

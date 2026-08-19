@@ -1,0 +1,14 @@
+---
+load:
+    begin: 4
+    end: 4
+    steps: 1
+data: 
+    image: "C:/Gaze/Gaze360/FaceBased/Image"
+    label: "C:/FaceAndGazeCodes/gaze-estimation-fairness-dev/Gaze360_Labels/Gender/test_with_genders.label"
+    name: gaze360
+    header: True
+    isFolder: False
+savename: "evaluation"
+device: 0
+reader: reader_adap
